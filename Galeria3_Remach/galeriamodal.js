@@ -1,12 +1,12 @@
 console.log("listen")
 
 function mostrarModal (event) {
-   var myModal = new boostrap.Modal(document.getElementById('myModal'));
+   var myModal = new bootstrap.Modal(document.getElementById('myModal'));
    myModal.show();
 }
 
 function cerrarModal (event) {
-   var myModal = new boostrap.Modal(document.getElementById('myModal'));
+   var myModal = new bootstrap.Modal(document.getElementById('myModal'));
    myModal.hide();
 }
 
@@ -15,6 +15,10 @@ function asignarComportamiento (event) {
    bottonVer.forEach(bottonAbrir => {
       bottonAbrir.addEventListener("click", mostrarModal);
    });
+   var closeButton = document.getElementById('closeModalbutton');
+   closeButton.addEventListener('click', cerrarModal);
 }
 
 document.addEventListener('DOMContentLoaded',asignarComportamiento);
+
+console.log("listen2")
